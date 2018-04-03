@@ -29,6 +29,7 @@ function finalParsePart(json, level){
 	currentJSON = json;
 	currentJSONstring = JSON.stringify(json);
 	console.log(json);
+	$(".btn-group").fadeIn(50);
 };
 
 async function getThree(figmaApiKey,figmaId) {

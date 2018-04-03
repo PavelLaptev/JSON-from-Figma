@@ -7,6 +7,7 @@ let selectedDropdown = $("#dropdown-selector"),
 	dropdownList = $(".dropdown-list"),
 	currentJSON,
 	currentJSONstring,
+	btnText,
 	flagWord;
 
 //////////////////////////////////
@@ -29,6 +30,7 @@ function finalParsePart(json, level){
 	currentJSON = json;
 	currentJSONstring = JSON.stringify(json);
 	console.log(json);
+	$(".btn__accent").text(btnText);
 	$(".btn-group").fadeIn(50);
 };
 
@@ -248,6 +250,7 @@ $(".dropdown-list .dropdown-item").click(function () {
 //////////////////////////////////
 
 $(".btn__accent").click(function(){
+	btnText = $(this).text()
 	if(!$("#token").val() && $("#file-id").val()){
 		alert("Paste personal access token");
 	} else if (!$("#file-id").val() && $("#token").val()){
@@ -268,6 +271,7 @@ $(".btn__accent").click(function(){
 			getByFlag($("#token").val(), $("#file-id").val(),flagWord);
 		}
 		$(".file-result__loader").show("fast");
+		$(this).text("Fetching…")
 	}
 });
 

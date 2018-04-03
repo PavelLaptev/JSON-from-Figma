@@ -1,0 +1,43 @@
+<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>select-JSON</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1239 277)">
+<g id="icons/m-size/select-JSON">
+<g id="Rectangle 2.3">
+<use xlink:href="#path0_fill" transform="translate(1239 -269)" fill="#EB5757"/>
+</g>
+<g id="Rectangle 2.8">
+<use xlink:href="#path0_fill" transform="translate(1255 -261)" fill="#2F80ED"/>
+</g>
+<g id="Rectangle 2.1">
+<use xlink:href="#path1_fill" transform="translate(1247 -277)" fill="#F2C94C"/>
+</g>
+<g id="Rectangle 2.9">
+<use xlink:href="#path2_fill" transform="translate(1239 -277)" fill="#6FCF97"/>
+</g>
+<g id="Rectangle 2.6">
+<use xlink:href="#path1_fill" transform="translate(1239 -261)" fill="#9B51E0"/>
+</g>
+<g id="Rectangle 2.2">
+<use xlink:href="#path3_fill" transform="translate(1255 -277)" fill="#BB6BD9"/>
+</g>
+<g id="Rectangle 2.7">
+<use xlink:href="#path3_fill" transform="translate(1247 -261)" fill="#F2F2F2"/>
+</g>
+<g id="Rectangle 2.5">
+<use xlink:href="#path4_fill" transform="matrix(0.707107 0.707107 -0.707107 0.707107 1251 -269)" fill="#56CCF2"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path5_fill" transform="translate(1255 -269)" fill="#F2C94C"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 8 8L 4 0L 0 8L 8 8Z"/>
+<path id="path1_fill" d="M 0 4C 0 1.79086 1.79086 0 4 0C 6.20914 0 8 1.79086 8 4C 8 6.20914 6.20914 8 4 8C 1.79086 8 0 6.20914 0 4Z"/>
+<path id="path2_fill" d="M 0 0L 4 0C 6.20914 0 8 1.79086 8 4C 8 6.20914 6.20914 8 4 8L 0 8L 0 0Z"/>
+<path id="path3_fill" d="M 0 0L 8 0L 8 8L 0 8L 0 0Z"/>
+<path id="path4_fill" d="M 0 0L 5.65686 0L 5.65686 5.65686L 0 5.65686L 0 0Z"/>
+<path id="path5_fill" d="M 0 3L 4 0L 8 3L 6.5 8L 1.5 8L 0 3Z"/>
+</defs>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="25" height="25" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>select-pages</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1328 277)">
+<g id="icons/m-size/select-pages">
+<g id="Rectangle 2.20">
+<use xlink:href="#path0_fill" transform="matrix(1 5.56415e-17 -5.53811e-17 1 1343 -262)" fill="#EB5757"/>
+</g>
+<g id="Rectangle 2.21">
+<use xlink:href="#path0_fill" transform="matrix(1 5.55112e-17 -5.55112e-17 1 1328 -277)" fill="#F2F2F2"/>
+</g>
+<g id="Rectangle 2.22">
+<use xlink:href="#path0_fill" transform="matrix(1 5.56415e-17 -5.53811e-17 1 1328 -262)" fill="#BB6BD9"/>
+</g>
+<g id="Rectangle 2.23">
+<use xlink:href="#path0_fill" transform="matrix(1 5.56415e-17 -5.53811e-17 1 1343 -277)" fill="#F2C94C"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 9.16669 0L 9.16669 9.18821L 0 9.18821L 0 0Z"/>
+</defs>
+</svg>

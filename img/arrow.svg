@@ -1,0 +1,12 @@
+<svg width="13" height="7" viewBox="0 0 13 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>arrow-down</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-773 204)">
+<g id="arrow-down">
+<use xlink:href="#path0_fill" transform="translate(773.828 -203.343)" fill="#F5F5F5"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 5.65685 5.65685L 11.3137 0L 0 0L 5.65685 5.65685Z"/>
+</defs>
+</svg>

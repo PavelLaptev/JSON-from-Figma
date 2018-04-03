@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JSON from figma</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="img/favico/favicon-32x32.png" sizes="32x32">
@@ -12,52 +13,54 @@
   </head>
   <body>
     <div class="info-screen">
-      <div class="info">
-        <div class="info__logo-block">
-          <div class="project-logo-m"></div>
-          <div class="info__title">JSON from figma file</div>
-        </div>
-        <div class="info__text-block">
-          <p>Parse and download a JSON from your figma file.</p>
-          <p>This page doesn’t store or collect your personal tokens 😊</p>
-        </div>
-        <div class="info__links"><a href="https://github.com/PavelLaptev/JSON-from-Figma" target="_blank">Project on GitHub</a><a href="#" target="_blank">Medium note</a>
-          <div class="icon-link">
-            <svg class="figma-logo-s"></svg><a href="https://www.figma.com/developers" target="_blank">Figma API</a>
+      <div class="info-wrap">
+        <div class="info">
+          <div class="info__logo-block">
+            <div class="project-logo-m"></div>
+            <div class="info__title">JSON from figma file</div>
           </div>
-        </div>
-      </div>
-      <div class="form">
-        <div class="input-wrap">
-          <div class="input-wrap__icon-label">
-            <label for="token">Personal access token</label><a class="input-wrap__icon-label_help" href="https://www.figma.com/developers/docs#auth-dev-token" target="_blank">?</a>
+          <div class="info__text-block">
+            <p>Parse and download a JSON from your figma file.</p>
+            <p>This page doesn’t store or collect your personal tokens 😊</p>
           </div>
-          <input type="text" id="token" value="373-9c6055ac-53a2-483b-a088-7c5a1e88860f" x-webkit-speech>
-        </div>
-        <div class="input-wrap">
-          <label for="file-id">File ID</label>
-          <input type="text" id="file-id" value="N48UVj8HUdQOTxn2hfqGHgld" x-webkit-speech>
-        </div>
-        <div class="dropdown-wrap">
-          <label for="dropdown-selector">Parse only</label>
-          <div id="dropdown-selector">
-            <div class="dropdown-item"><i class="icon-m_JSON" id="selected-icon"></i><span class="dropdown-item__text">Full JSON structure</span>
-              <div class="dropdown-item__arrow-down"></div>
+          <div class="info__links"><a href="https://github.com/PavelLaptev/JSON-from-Figma" target="_blank">Project on GitHub</a><a href="#" target="_blank">Medium note</a>
+            <div class="icon-link">
+              <svg class="figma-logo-s"></svg><a href="https://www.figma.com/developers" target="_blank">Figma API</a>
             </div>
           </div>
-          <div class="dropdown-list">
-            <div class="dropdown-item select-JSON" style="display:none"><i class="icon-m_JSON"></i><span class="dropdown-item__text">Full JSON structure</span></div>
-            <div class="dropdown-item select-pages-and-artboards"><i class="icon-m_pages-and-artboards"></i><span class="dropdown-item__text">Pages and artboards</span></div>
-            <div class="dropdown-item select-pages"><i class="icon-m_pages"></i><span class="dropdown-item__text">Pages</span></div>
-            <div class="dropdown-item select-artboards"><i class="icon-m_artboards"></i><span class="dropdown-item__text">Artboards</span></div>
-            <div class="dropdown-item select-by-flag"><i class="icon-m_by-flag"></i><span class="dropdown-item__text">Select artboards by name</span></div>
+        </div>
+        <div class="form">
+          <div class="input-wrap">
+            <div class="input-wrap__icon-label">
+              <label for="token">Personal access token</label><a class="input-wrap__icon-label_help" href="https://www.figma.com/developers/docs#auth-dev-token" target="_blank">?</a>
+            </div>
+            <input type="text" id="token" value="373-9c6055ac-53a2-483b-a088-7c5a1e88860f" x-webkit-speech>
           </div>
+          <div class="input-wrap">
+            <label for="file-id">File ID</label>
+            <input type="text" id="file-id" value="N48UVj8HUdQOTxn2hfqGHgld" x-webkit-speech>
+          </div>
+          <div class="dropdown-wrap">
+            <label for="dropdown-selector">Parse only</label>
+            <div id="dropdown-selector">
+              <div class="dropdown-item"><i class="icon-m_JSON" id="selected-icon"></i><span class="dropdown-item__text">Full JSON structure</span>
+                <div class="dropdown-item__arrow-down"></div>
+              </div>
+            </div>
+            <div class="dropdown-list">
+              <div class="dropdown-item select-JSON" style="display:none"><i class="icon-m_JSON"></i><span class="dropdown-item__text">Full JSON structure</span></div>
+              <div class="dropdown-item select-pages-and-artboards"><i class="icon-m_pages-and-artboards"></i><span class="dropdown-item__text">Pages and artboards</span></div>
+              <div class="dropdown-item select-pages"><i class="icon-m_pages"></i><span class="dropdown-item__text">Pages</span></div>
+              <div class="dropdown-item select-artboards"><i class="icon-m_artboards"></i><span class="dropdown-item__text">Artboards</span></div>
+              <div class="dropdown-item select-by-flag"><i class="icon-m_by-flag"></i><span class="dropdown-item__text">Select artboards by name</span></div>
+            </div>
+          </div>
+          <div class="input-wrap" id="by-flag-wrap" style="display:none;">
+            <label for="by-flag">Name</label>
+            <input type="text" id="by-flag" x-webkit-speech>
+          </div>
+          <button class="btn__accent">Parse my file</button>
         </div>
-        <div class="input-wrap" id="by-flag-wrap" style="display:none;">
-          <label for="by-flag">Name</label>
-          <input type="text" id="by-flag" x-webkit-speech>
-        </div>
-        <button class="btn__accent">Parse my file</button>
       </div>
       <div class="file-result" id="file-result">
         <div class="file-result__loader"></div>

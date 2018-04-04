@@ -42,7 +42,11 @@ async function getThree(figmaApiKey,figmaId) {
 		}
 	})
 	var figmaTreeStructure = await result.json();
-	$(".file-result__loader").hide();
+	$(".file-result__loader").css({
+		"-webkit-transition": "scaleY(0)",
+		"-o-transition": "scaleY(0)",
+		"transform": "scaleY(0)"
+	});
 	getBase(figmaTreeStructure);
 
 	if (typeof figmaTreeStructure.err !== "undefined"){
@@ -62,7 +66,6 @@ async function getPagesAndArtboards(figmaApiKey,figmaId) {
 		}
 	})
 	var figmaTreeStructure = await result.json();
-	$(".file-result__loader").hide();
 
 	if (typeof figmaTreeStructure.err == "undefined"){
 		getBase(figmaTreeStructure);
@@ -83,7 +86,6 @@ async function getPagesAndArtboards(figmaApiKey,figmaId) {
 
 		finalParsePart(pagesAndArtboardsJSON, 2);
 	} else {
-		$(".file-result__loader").hide();
 		getBase(figmaTreeStructure);
 		$(".file-result__name").text(figmaTreeStructure.status);
 		finalParsePart(figmaTreeStructure, 1);
@@ -100,7 +102,6 @@ async function getPages(figmaApiKey,figmaId) {
 		}
 	});
 	var figmaTreeStructure = await result.json();
-	$(".file-result__loader").hide();
 
 	if (typeof figmaTreeStructure.err == "undefined"){
 		getBase(figmaTreeStructure);
@@ -118,7 +119,6 @@ async function getPages(figmaApiKey,figmaId) {
 
 		finalParsePart(pagesJSON, 2);
 	} else {
-		$(".file-result__loader").hide();
 		getBase(figmaTreeStructure);
 		$(".file-result__name").text(figmaTreeStructure.status);
 		finalParsePart(figmaTreeStructure, 1);
@@ -135,7 +135,6 @@ async function getArtboards(figmaApiKey,figmaId) {
 		}
 	})
 	var figmaTreeStructure = await result.json();
-	$(".file-result__loader").hide();
 
 	if (typeof figmaTreeStructure.err == "undefined"){
 		getBase(figmaTreeStructure);
@@ -155,7 +154,6 @@ async function getArtboards(figmaApiKey,figmaId) {
 
 		finalParsePart(artboardsJSON, 2);
 	} else {
-		$(".file-result__loader").hide();
 		getBase(figmaTreeStructure);
 		$(".file-result__name").text(figmaTreeStructure.status);
 		finalParsePart(figmaTreeStructure, 1);
@@ -172,7 +170,6 @@ async function getByFlag(figmaApiKey,figmaId,flagWord) {
 		}
 	})
 	var figmaTreeStructure = await result.json();
-	$(".file-result__loader").hide();
 
 	if (typeof figmaTreeStructure.err == "undefined"){
 		getBase(figmaTreeStructure);
@@ -195,7 +192,6 @@ async function getByFlag(figmaApiKey,figmaId,flagWord) {
 
 		finalParsePart(flagsJSON, 2);
 	} else {
-		$(".file-result__loader").hide();
 		getBase(figmaTreeStructure);
 		$(".file-result__name").text(figmaTreeStructure.status);
 		finalParsePart(figmaTreeStructure, 1);
@@ -270,7 +266,11 @@ $(".btn__accent").click(function(){
 			flagWord = $("#by-flag").val();
 			getByFlag($("#token").val(), $("#file-id").val(),flagWord);
 		}
-		$(".file-result__loader").show("fast");
+		$(".file-result__loader").css({
+			"-webkit-transition": "scaleY(1)",
+			"-o-transition": "scaleY(1)",
+			"transform": "scaleY(1)"
+		});
 		$(this).text("Fetching…")
 	}
 });

@@ -30,6 +30,11 @@ function finalParsePart(json, level){
 	currentJSON = json;
 	currentJSONstring = JSON.stringify(json);
 	console.log(json);
+	$(".file-result__loader").css({
+		"-webkit-transition": "scaleY(0)",
+		"-o-transition": "scaleY(0)",
+		"transform": "scaleY(0)"
+	});
 	$(".btn__accent").text(btnText);
 	$(".btn-group").fadeIn(50);
 };
@@ -42,11 +47,6 @@ async function getThree(figmaApiKey,figmaId) {
 		}
 	})
 	var figmaTreeStructure = await result.json();
-	$(".file-result__loader").css({
-		"-webkit-transition": "scaleY(0)",
-		"-o-transition": "scaleY(0)",
-		"transform": "scaleY(0)"
-	});
 	getBase(figmaTreeStructure);
 
 	if (typeof figmaTreeStructure.err !== "undefined"){
